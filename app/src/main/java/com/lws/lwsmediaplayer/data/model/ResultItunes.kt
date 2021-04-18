@@ -8,4 +8,16 @@ data class ResultItunes(
     val collectionName: String,
     val previewUrl: String,
     val trackName: String
-)
+) {
+
+    constructor() : this("",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "")
+
+    var isPlaying = false
+    var audioSessionId = -1
+}

@@ -4,6 +4,8 @@
     android:id="@+id/containerPerItem"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:padding="16dp"
+    tools:background="@color/grey"
     android:layout_height="wrap_content">
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -20,22 +22,36 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@+id/imageview"
         app:layout_constraintTop_toTopOf="@+id/imageview"
-        tools:text="Track Name" />
+        android:layout_marginStart="16dp"
+        tools:text="Track Name"
+        android:layout_marginLeft="16dp" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvArtist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@+id/imageview"
+        app:layout_constraintStart_toStartOf="@+id/tvTrack"
         app:layout_constraintTop_toBottomOf="@+id/tvTrack"
-        tools:text="artist Name" />
+        tools:text="Artist Name" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvAlbum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@+id/imageview"
+        app:layout_constraintStart_toStartOf="@+id/tvTrack"
         app:layout_constraintTop_toBottomOf="@+id/tvArtist"
         tools:text="Album Name" />
+
+    <com.gauravk.audiovisualizer.visualizer.CircleLineVisualizer
+        android:id="@+id/visualizer"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:avType="outline"
+        app:avColor="@color/av_orange"
+        app:avSpeed="normal"
+        app:avDensity="0.8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
