@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity() {
         mediaPlayer.reset()
     }
 
-    private fun playSound(url: String) {
+    fun playSound(url: String) {
         isPlaying = true
         binding.containerMedia.btnPlayOrPause.setImageResource(R.drawable.ic_pause_24)
 
