@@ -14,7 +14,6 @@
 
 Pre ->
  - clone the git first
- - change branch to develop
 
 On ->
  - open android studio
